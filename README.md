@@ -1,76 +1,53 @@
 # Expense Tracker 💰
-Apne expenses track karne ka simple website. React + Node.js mein bana hai, aur data browser ke localStorage mein save hota hai (koi database nahi chahiye).
+A simple web app to track your daily expenses. Built with React + Node.js. Data is stored in your browser's localStorage (no database required).
 ---
 ## Features
-- **Expense Add karo** — Description, Amount, Category, Date ke saath
+- **Add Expenses** — with Description, Amount, Category, and Date
 - **Categories** — Food, Transport, Shopping, Entertainment, Bills, Health, Education, Other
-- **Search & Filter** — Text search, category filter, month filter
-- **Monthly Summary** — Total spending dekho aur previous month se compare karo
-- **Chart** — Doughnut chart mein category-wise spending dekhlo
-- **Delete** — Koi bhi expense delete kar sakte ho
-- **Data safe** — Browser band karne ke baad bhi data localStorage mein save rahega
+- **Search & Filter** — search by text, filter by category, filter by month
+- **Monthly Summary** — view total spending and compare with previous month
+- **Chart** — doughnut chart showing category-wise spending breakdown
+- **Delete** — remove any expense entry
+- **Persistent Data** — data stays saved in localStorage even after closing the browser
 ---
-## Kaise Run Karein (Step by Step)
-### Pehli baar (sirf ek baar karna hai):
-1. **PowerShell kholo** — Windows key + R press karo, `powershell` likho, Enter press karo
-2. **Project folder mein jaao:**
+## How to Run
+### First time setup (one-time only):
+1. **Open PowerShell** — Press `Windows + R`, type `powershell`, press Enter
+2. **Go to project folder:**
    ```powershell
    cd C:\Users\fiziy\AppData\Local\Temp\opencode\expense-tracker
    ```
-3. **Dependencies install karo:**
+3. **Install dependencies:**
    ```powershell
    npm install
    ```
-   *(yeh sirf pehli baar karna hai)*
-### App chalane ke liye (har baar):
+### To start the app (every time):
 ```powershell
 cd C:\Users\fiziy\AppData\Local\Temp\opencode\expense-tracker
 npm run dev
 ```
-Console mein kuch aisa dikhega:
+You'll see something like:
 ```
 VITE ready on http://localhost:5173
 Server running on http://localhost:3001
 ```
-**Browser mein kholo:** `http://localhost:5173`
-### App band karna:
-Console mein `Ctrl + C` press karo, phir `Y` press karo.
+**Open in browser:** `http://localhost:5173`
+### To stop the app:
+Press `Ctrl + C` in the console, then press `Y`.
 ---
 ## Project Structure
-```
-expense-tracker/
-├── client/                  # React frontend (Vite)
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ExpenseForm.jsx      # Add expense form
-│   │   │   ├── ExpenseList.jsx      # Expenses table
-│   │   │   ├── ExpenseSummary.jsx   # Monthly summary
-│   │   │   ├── ExpenseChart.jsx     # Doughnut chart
-│   │   │   └── FilterBar.jsx        # Search & filter
-│   │   ├── hooks/
-│   │   │   └── useLocalStorage.js   # LocalStorage hook
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   └── vite.config.js
-├── server/                  # Express server
-│   └── index.js
-├── package.json
-└── README.md
-```
 ---
 ## Production Build
-Sirf hosting ke liye ready karna hai to:
+To build for production:
 ```powershell
 npm run build
 npm start
 ```
-Phir `http://localhost:3001` pe app chalegi.
+Then open `http://localhost:3001` in your browser.
 ---
 ## Tech Stack
 - **Frontend:** React 18, Vite, Chart.js, react-chartjs-2
 - **Backend:** Node.js, Express
-- **Data Storage:** Browser LocalStorage (kisi DB ki zaroorat nahi)
+- **Data Storage:** Browser LocalStorage (no database needed)
 ---
 ## GitHub Repo
-Source code: [https://github.com/fiziya-kc/expense-tracker_2026](https://github.com/fiziya-kc/expense-tracker_2026)
